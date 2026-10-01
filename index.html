@@ -3,10 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Mišmaš Apps</title>
+
+    <title>David Mišmaš — Apps</title>
+    <meta name="description" content="Apps for iPhone and Mac by David Mišmaš.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --background: #f5f5f7;
+            --card: #ffffff;
+            --text: #1d1d1f;
+            --secondary: #6e6e73;
+            --blue: #0071e3;
+            --border: rgba(0,0,0,0.06);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                         "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 90px 0 75px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(46px, 7vw, 72px);
+            letter-spacing: -0.045em;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        header p {
+            margin-top: 22px;
+            color: var(--secondary);
+            font-size: 21px;
+            line-height: 1.45;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        .section-header {
+            margin-bottom: 24px;
+        }
+
+        .section-header h2 {
+            font-size: 30px;
+            letter-spacing: -0.025em;
+        }
+
+        .section-header p {
+            margin-top: 7px;
+            color: var(--secondary);
+            font-size: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .app-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 180px;
+            padding: 28px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            text-decoration: none;
+            color: inherit;
+            transition:
+                transform 0.22s ease,
+                box-shadow 0.22s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+        }
+
+        .app-card h3 {
+            font-size: 23px;
+            letter-spacing: -0.02em;
+        }
+
+        .app-card .platform {
+            margin-top: 7px;
+            color: var(--secondary);
+            font-size: 14px;
+        }
+
+        .app-card .link {
+            margin-top: 32px;
+            color: var(--blue);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .coming {
+            display: inline-block;
+            margin-top: 7px;
+            color: var(--secondary);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        footer {
+            border-top: 1px solid rgba(0,0,0,0.08);
+            padding: 30px 0 45px;
+            color: var(--secondary);
+            font-size: 13px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                padding: 65px 0 55px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .container {
+                width: min(100% - 28px, 1100px);
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .app-card {
+                min-height: 155px;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>David Mišmaš Apps</h1>
-    <p>Support and information for my apps.</p>
+
+<div class="container">
+
+    <header>
+        <h1>Apps by David Mišmaš</h1>
+        <p>Independent apps for iPhone and Mac.</p>
+    </header>
+
+
+    <!-- iPHONE APPS -->
+
+    <section>
+
+        <div class="section-header">
+            <h2>iPhone Apps</h2>
+            <p>Available on the App Store.</p>
+        </div>
+
+        <div class="grid">
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Vremenko</h3>
+                    <div class="platform">Weather</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Omrežnina</h3>
+                    <div class="platform">Utility</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Zrak</h3>
+                    <div class="platform">Air quality</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Kam Danes</h3>
+                    <div class="platform">Explore Slovenia</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Cinerec</h3>
+                    <div class="platform">Video</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Price Track</h3>
+                    <div class="platform">Utility</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Cineshoot</h3>
+                    <div class="platform">Photography</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Car Park Timer</h3>
+                    <div class="platform">Utility</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Moments</h3>
+                    <div class="platform">Photo diary</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Grejn</h3>
+                    <div class="platform">Photography</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Tetromix</h3>
+                    <div class="platform">Puzzle game</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Receipta</h3>
+                    <div class="platform">Utility</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>Rootine</h3>
+                    <div class="platform">Productivity</div>
+                </div>
+                <div class="link">View app →</div>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAC APPS -->
+
+    <section>
+
+        <div class="section-header">
+            <h2>Mac Apps</h2>
+            <p>Built for macOS.</p>
+        </div>
+
+        <div class="grid">
+
+            <a class="app-card" href="#">
+                <div>
+                    <h3>iRAW Photo</h3>
+                    <div class="platform">RAW photo editor for Mac</div>
+                    <div class="coming">Coming soon</div>
+                </div>
+                <div class="link">Learn more →</div>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <span>© 2026 David Mišmaš</span>
+            <span>
+                <a href="mailto:YOUR-EMAIL@example.com">Contact</a>
+            </span>
+        </div>
+    </footer>
+
+</div>
+
 </body>
 </html>
