@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Log2Rec converts Apple Log video to Rec.709 with cinematic looks, editing tools and flexible export controls.">
+  <title>Log2Rec</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #080b0a;
+      color: #f5f7f4;
+      --accent: #b9ff57;
+      --secondary: #a8ada6;
+      --border: #353b35;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      width: min(100% - 40px, 720px);
+      margin: auto;
+      padding: 80px 0;
+    }
+
+    .back-link {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .back-link:focus-visible {
+      text-decoration: underline;
+    }
+
+    .label {
+      margin-top: 48px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 14px 0 20px;
+      font-size: clamp(44px, 9vw, 76px);
+      letter-spacing: -.05em;
+      line-height: 1;
+    }
+
+    p {
+      max-width: 650px;
+      color: var(--secondary);
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 36px;
+    }
+
+    .links a {
+      display: inline-block;
+      padding: 13px 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: #f5f7f4;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .links a:hover,
+    .links a:focus-visible {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .privacy {
+      margin-top: 80px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 40px;
+    }
+
+    .privacy h2 {
+      margin: 10px 0 18px;
+      font-size: clamp(30px, 6vw, 44px);
+      letter-spacing: -.035em;
+    }
+
+    .privacy p {
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+
+    .privacy .date {
+      color: #777e76;
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 24px 20px;
+      color: #777e76;
+      font-size: 13px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="https://davidmismas.github.io/">
+      ← Back to main page
+    </a>
+
+    <div class="label">Apple Log color for iPhone and iPad</div>
+    <h1>Log2Rec</h1>
+    <p>
+      Convert Apple Log footage to Rec.709, choose a cinematic film look and
+      fine-tune the result with essential color controls, glow and moving film
+      grain. Export in 4K or 1080p with control over frame rate and bitrate,
+      or process multiple clips as a batch.
+    </p>
+
+    <nav class="links" aria-label="Information and support">
+      <a href="#privacy">Privacy Policy</a>
+      <a href="mailto:david.mismas@icloud.com?subject=Log2Rec%20Support">
+        Support: david.mismas@icloud.com
+      </a>
+    </nav>
+
+    <section class="privacy" id="privacy">
+      <div class="label">Privacy Policy</div>
+      <h2>Your footage stays yours.</h2>
+      <p class="date">Effective September 17, 2026</p>
+      <p>
+        Log2Rec does not collect, transmit, sell, share or store personal
+        information. Videos selected by the user are processed locally on the
+        device and are never uploaded to external servers.
+      </p>
+      <p>
+        Temporary working files are removed when they are no longer needed.
+        Photo Library access is used only to select videos and save finished
+        exports. Log2Rec does not use analytics, advertising, tracking
+        technologies or third-party data collection services.
+      </p>
+      <p>
+        For privacy questions, contact
+        <a class="back-link" href="mailto:david.mismas@icloud.com?subject=Log2Rec%20Privacy">
+          david.mismas@icloud.com
+        </a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>© 2026 David Mišmaš · Log2Rec</footer>
+</body>
+</html>
